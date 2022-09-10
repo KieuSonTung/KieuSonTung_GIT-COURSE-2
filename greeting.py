@@ -1,3 +1,5 @@
+import logging
+
 # Task 1
 
 print('Hello World')
@@ -10,5 +12,12 @@ def add_two_nums(a, b):
 # Task 3
 
 def cal_sum_list(list):
-    result = sum(list)
-    return result
+    if list.count(None) >= 1:
+        print('List handles non-number')
+    else:
+        result = sum(list)
+        return result
+
+
+my_list = [None, 1, 2]
+print(cal_sum_list(my_list))
